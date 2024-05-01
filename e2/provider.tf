@@ -12,17 +12,3 @@ terraform {
   }
   required_version = ">= 1.8.2"
 }
-# provider "aws" {
-#   region = "us-east-1"
-# }
-
-# # provider "http" {}
-
-# // initialize provider in "MWS" mode to provision new workspace
-# provider "databricks" {
-#   alias         = "mws"
-#   host          = "https://accounts.cloud.databricks.com"
-#   account_id    = var.databricks_account_id
-#   client_id     = var.client_id
-#   client_secret = var.client_secret
-# }

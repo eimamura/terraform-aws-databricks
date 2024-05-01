@@ -11,8 +11,3 @@ terraform {
   }
   required_version = ">= 1.8.2"
 }
-
-# provider "databricks" {
-#   host  = var.databricks_host
-#   token = var.databricks_token
-# }
