@@ -14,8 +14,6 @@ o:
 	terraform output
 c:
 	terraform console
-t:
-	terraform plan
 t2:
 	terraform plan -var var_string=eri -var var_number=77
 v:
@@ -24,3 +22,5 @@ f:
 	terraform fmt
 s:
 	terraform state list
+rm:
+	find .terraform* -exec rm -rf {} + ; find terraform.tfstate* -exec rm -rf {} +
