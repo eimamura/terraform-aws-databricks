@@ -6,6 +6,8 @@ p:
 	terraform plan -var-file=variables.tfvars
 a:
 	terraform apply -auto-approve -var-file=variables.tfvars
+ar:
+	terraform apply -refresh-only -auto-approve -var-file=variables.tfvars
 d:
 	terraform destroy -auto-approve -var-file=variables.tfvars
 o:

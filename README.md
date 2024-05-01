@@ -14,11 +14,13 @@ aws iam list-users
 terraform apply
 terraform destroy
 terraform apply -auto-approve
+terraform apply -refresh-only -auto-approve
 terraform destroy -auto-approve
 terraform output my-vm-public-ip
 terraform console
 terraform output -json
 TF_LOG=DEBUG terraform apply
+terraform providers
 ```
 
 ```bash
