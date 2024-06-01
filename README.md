@@ -1,4 +1,4 @@
-# terraform-on-aws-databricks
+# terraform-aws-databricks
 This repository contains Terraform code for deploying and configuring Databricks E2 architecture on AWS
 
 # Commands
