@@ -27,6 +27,7 @@ provider "databricks" {
 }
 
 module "e2" {
+  # source                   = "./modules/e2_v2"
   source                   = "./modules/e2"
   providers                = { databricks.mws = databricks.mws }
   databricks_account_id    = var.databricks_account_id
