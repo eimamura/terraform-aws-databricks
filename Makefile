@@ -3,13 +3,13 @@ az:
 i:
 	terraform init
 p:
-	terraform plan -var-file=variables.tfvars
+	terraform plan
 a:
-	terraform apply -auto-approve -var-file=variables.tfvars
+	terraform apply -auto-approve
 ar:
-	terraform apply -refresh-only -auto-approve -var-file=variables.tfvars
+	terraform apply -refresh-only -auto-approve
 d:
-	terraform destroy -auto-approve -var-file=variables.tfvars
+	terraform destroy -auto-approve
 o:
 	terraform output
 c:

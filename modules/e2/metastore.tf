@@ -1,8 +1,8 @@
 resource "databricks_metastore" "this" {
   provider      = databricks.mws
-  name          = "primary"
-  owner         = "imamuraeriel@gmail.com"
-  region        = var.region
+  name          = "my-metastore"
+  owner         = var.databricks_admin_user
+  region        = var.aws_region
   force_destroy = true
 }
 

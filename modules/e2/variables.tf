@@ -1,3 +1,14 @@
+variable "databricks_admin_user" {}
+variable "databricks_client_id" {}
+variable "databricks_client_secret" {}
+variable "databricks_account_id" {}
+variable "aws_region" {}
+
+variable "tags" { default = {} }
+
+variable "cidr_block" { default = "10.4.0.0/16" }
+
+
 variable "instance_types" {
   description = "List of instance types"
   type        = list(string)
