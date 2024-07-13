@@ -57,22 +57,22 @@ module "vpc_endpoints" {
         Name = "${local.prefix}-s3-vpc-endpoint"
       }
     },
-    sts = {
-      service             = "sts"
-      private_dns_enabled = true
-      subnet_ids          = module.vpc.private_subnets
-      tags = {
-        Name = "${local.prefix}-sts-vpc-endpoint"
-      }
-    },
-    kinesis-streams = {
-      service             = "kinesis-streams"
-      private_dns_enabled = true
-      subnet_ids          = module.vpc.private_subnets
-      tags = {
-        Name = "${local.prefix}-kinesis-vpc-endpoint"
-      }
-    },
+    # sts = {
+    #   service             = "sts"
+    #   private_dns_enabled = true
+    #   subnet_ids          = module.vpc.private_subnets
+    #   tags = {
+    #     Name = "${local.prefix}-sts-vpc-endpoint"
+    #   }
+    # },
+    # kinesis-streams = {
+    #   service             = "kinesis-streams"
+    #   private_dns_enabled = true
+    #   subnet_ids          = module.vpc.private_subnets
+    #   tags = {
+    #     Name = "${local.prefix}-kinesis-vpc-endpoint"
+    #   }
+    # },
   }
 
   tags = var.tags
