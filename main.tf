@@ -17,7 +17,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-// initialize provider in "MWS" mode to provision new workspace
+// initialize provider in "MWS" mode for account-level resources
 provider "databricks" {
   alias         = "mws"
   host          = "https://accounts.cloud.databricks.com"
@@ -37,6 +37,7 @@ module "e2" {
   databricks_admin_user    = var.databricks_admin_user
 }
 
+// initialize provider at workspace level, to create UC resources
 provider "databricks" {
   alias = "ws"
   host  = module.e2.databricks_host

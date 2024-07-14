@@ -1,5 +1,14 @@
 # terraform-aws-databricks
-This repository contains Terraform code for deploying and configuring Databricks E2 architecture on AWS
+This repository contains Terraform code for deploying and configuring Databricks E2 (Enterprise Edition ) architecture on AWS
+
+Databricks provides 4 main deployment models they are:
+
+Public Cloud Deployment Model: Databricks can be deployed on public cloud platforms such as AWS, Azure, and Google Cloud Platform. This is the most common deployment model for Databricks and provides a scalable and flexible environment for data processing.
+Private Virtual Cloud Deployment Model: Databricks can also be deployed in a private virtual cloud, such as a VMware-based virtualized environment. This deployment model provides greater control and security over the Databricks environment.
+Enterprise Edition (E2) Deployment Model: The E2 deployment model provides a highly scalable and multi-tenant environment for Databricks. It includes advanced features such as Delta Lake, automated machine learning, and advanced security and governance features.
+Single Tenant Deployment Model: The single-tenant deployment model allows organizations to deploy Databricks in a dedicated environment, providing greater control and isolation over the Databricks environment. This deployment model is well-suited for organizations with strict security or compliance requirements.
+
+Reference: https://community.databricks.com/t5/data-engineering/what-is-the-difference-between-single-tenant-and-e2-architecture/td-p/18347
 
 # Commands
 
