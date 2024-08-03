@@ -5,5 +5,5 @@ resource "databricks_git_credential" "ado" {
 }
 
 resource "databricks_repo" "my_repo" {
-  url = "https://github.com/eimamura/databricks-notebook.git"
+  url = local.git_repo_url
 }

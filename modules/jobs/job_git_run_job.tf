@@ -2,7 +2,7 @@ resource "databricks_job" "job_git_run_job" {
   name = local.job_git_run_job
 
   git_source {
-    url      = "https://github.com/eimamura/databricks-notebook.git"
+    url      = local.git_repo_url
     branch   = "main"
     provider = "github"
   }

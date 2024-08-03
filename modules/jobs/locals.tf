@@ -1,5 +1,6 @@
 
 locals {
+  git_repo_url          = "https://github.com/eimamura/databricks-notebook.git"
   smallest_node_type_id = data.databricks_node_type.smallest.id
   job_sample            = "job_sample"
   job_git               = "job_git"

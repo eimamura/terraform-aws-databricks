@@ -1,27 +1,27 @@
 resource "databricks_job" "job_git" {
   name = local.job_git
 
-  health {
-    rules {
-      metric = "RUN_DURATION_SECONDS"
-      op     = "GREATER_THAN"
-      value  = 1
-    }
-  }
+  # health {
+  #   rules {
+  #     metric = "RUN_DURATION_SECONDS"
+  #     op     = "GREATER_THAN"
+  #     value  = 1
+  #   }
+  # }
 
-  email_notifications {
-    # This block can be configured on both job and task levels
-    on_start                               = [var.databricks_admin_user]
-    on_success                             = []
-    on_failure                             = []
-    on_duration_warning_threshold_exceeded = []
-  }
+  # email_notifications {
+  #   # This block can be configured on both job and task levels
+  #   on_start                               = [var.databricks_admin_user]
+  #   on_success                             = []
+  #   on_failure                             = []
+  #   on_duration_warning_threshold_exceeded = []
+  # }
 
-  schedule {
-    quartz_cron_expression = "5 0 17 * * ?"
-    timezone_id            = "America/Sao_Paulo"
-    # pause_status = "UNPAUSED" # PAUSED or UNPAUSED
-  }
+  # schedule {
+  #   quartz_cron_expression = "5 0 17 * * ?"
+  #   timezone_id            = "America/Sao_Paulo"
+  #   # pause_status = "UNPAUSED" # PAUSED or UNPAUSED
+  # }
 
   job_cluster {
     job_cluster_key = local.job_git
@@ -40,7 +40,7 @@ resource "databricks_job" "job_git" {
   }
 
   git_source {
-    url      = "https://github.com/eimamura/databricks-notebook.git"
+    url      = local.git_repo_url
     branch   = "main"
     provider = "github"
   }
