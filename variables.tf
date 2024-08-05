@@ -7,3 +7,4 @@ variable "databricks_account_id" {}
 variable "databricks_admin_user" {}
 
 variable "github_personal_access_token" {}
+variable "env" { default = "dev" }

@@ -42,7 +42,7 @@ resource "databricks_job" "job_git" {
   git_source {
     url      = local.git_repo_url
     branch   = "main"
-    provider = "github"
+    provider = "gitHub"
   }
 
   parameter {

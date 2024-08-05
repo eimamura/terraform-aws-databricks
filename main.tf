@@ -53,12 +53,25 @@ module "workspace" {
   depends_on            = [module.e2]
 }
 
-module "jobs" {
-  source                       = "./modules/jobs"
+# module "jobs" {
+#   source                       = "./modules/jobs"
+#   providers                    = { databricks = databricks.ws }
+#   databricks_host              = module.e2.databricks_host
+#   databricks_token             = module.e2.databricks_token
+#   databricks_admin_user        = var.databricks_admin_user
+#   github_personal_access_token = var.github_personal_access_token
+#   depends_on                   = [module.workspace]
+# }
+
+module "job_main" {
+  source                       = "./modules/job_main"
   providers                    = { databricks = databricks.ws }
   databricks_host              = module.e2.databricks_host
   databricks_token             = module.e2.databricks_token
   databricks_admin_user        = var.databricks_admin_user
   github_personal_access_token = var.github_personal_access_token
+  git_config                   = local.git_config
+  tags                         = local.tags
+  env                          = var.env
   depends_on                   = [module.workspace]
 }
